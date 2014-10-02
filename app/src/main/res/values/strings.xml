@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Congresso FOAr</string>
+    <string name="buttonDay1">Segunda-Feira</string><string name="buttonDay2">Terça-Feira</string><string name="buttonDay3">Quarta-Feira</string><string name="buttonDay4">Quinta-Feira</string><string name="buttonDay5">Sexta-Feira</string>
+    <string name="title_day1">Segunda-Feira</string><string name="title_day2">Terça-Feira</string><string name="title_day3">Quarta-Feira</string>
+    <string name="title_day4">Quinta-Feira</string>
+    <string name="title_day5">Sexta-Feira</string>
+
+</resources>
