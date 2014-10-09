@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Sobre extends Activity{
+public class About extends Activity{
 	
 	TextView mSobre;
 	

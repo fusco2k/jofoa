@@ -1,23 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".JofoaMain" >       
-   
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    
-     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-6441386430650591/6373774084" >
-    </com.google.android.gms.ads.AdView>
+<?xml version="1.0" encoding="utf-8"?>
 
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pre_banner"
+        android:src="@drawable/pre_banner"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/schedule_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_mask"
+        android:layout_below="@+id/pre_banner"
+        android:layout_alignLeft="@+id/pre_banner"
+        android:layout_alignStart="@+id/pre_banner"
+        android:layout_marginTop="45dp" />
+
+
+
+   <Button
+       android:id="@+id/register_button"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:background="@drawable/button_mask"
+       android:layout_below="@+id/schedule_button"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="20dp" />
+
+
+
+       <Button
+           android:id="@+id/about_button"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:background="@drawable/button_mask"
+           android:layout_below="@+id/register_button"
+           android:layout_alignRight="@+id/pre_banner"
+           android:layout_alignEnd="@+id/pre_banner"
+           android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>

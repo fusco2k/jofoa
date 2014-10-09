@@ -2,9 +2,7 @@
 <resources>
 
     <string name="app_name">Congresso FOAr</string>
-    <string name="buttonDay1">Segunda-Feira</string><string name="buttonDay2">Terça-Feira</string><string name="buttonDay3">Quarta-Feira</string><string name="buttonDay4">Quinta-Feira</string><string name="buttonDay5">Sexta-Feira</string>
-    <string name="title_day1">Segunda-Feira</string><string name="title_day2">Terça-Feira</string><string name="title_day3">Quarta-Feira</string>
-    <string name="title_day4">Quinta-Feira</string>
-    <string name="title_day5">Sexta-Feira</string>
+    <string name="gcm_sender_id">613297133076</string>
+    <string name="ad_id">ca-app-pub-6441386430650591/6373774084</string>
 
 </resources>

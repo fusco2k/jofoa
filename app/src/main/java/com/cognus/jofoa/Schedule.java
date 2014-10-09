@@ -6,19 +6,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 
-public class JofoaMain extends ActionBarActivity {
+public class Schedule extends ActionBarActivity {
 
-	private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-
-	InterstitialAd interstitial;
 	AdView mAdView;
 
 	private ViewPager pager;
@@ -29,9 +22,7 @@ public class JofoaMain extends ActionBarActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
-		checkForGcm();
-
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_schedule);
 		
 		mAdView = (AdView) findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
@@ -43,36 +34,11 @@ public class JofoaMain extends ActionBarActivity {
 		bar.setNavigationMode(android.support.v7.app.ActionBar.NAVIGATION_MODE_TABS);
 
 		mTabsAdapter = new TabsAdapter(this, pager);
-		mTabsAdapter.addTab(bar.newTab().setText("Segunda-Feira"),
-				Day1ListFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Terça-Feira"),
-				Day2ListFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Quarta-Feira"),
-				Day3ListFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Quinta-Feira"),
-				Day4ListFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Sexta-Feira"),
-				Day5ListFragment.class, null);
-		
-		
-		
-	}
-
-	private boolean checkForGcm() {
-		int ret = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
-		if (ConnectionResult.SUCCESS == ret) {
-			return true;
-		} else {
-			if (GooglePlayServicesUtil.isUserRecoverableError(ret)) {
-				GooglePlayServicesUtil.getErrorDialog(ret, this,
-						PLAY_SERVICES_RESOLUTION_REQUEST).show();
-			} else {
-				Toast.makeText(this,
-						"Google Message Not Supported on this device",
-						Toast.LENGTH_LONG).show();
-			}
-			return false;
-		}
+		mTabsAdapter.addTab(bar.newTab().setText("Segunda-Feira"),Day1ListFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Terça-Feira"),Day2ListFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Quarta-Feira"),Day3ListFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Quinta-Feira"),Day4ListFragment.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Sexta-Feira"),Day5ListFragment.class, null);
 	}
 
 	@Override
@@ -81,20 +47,6 @@ public class JofoaMain extends ActionBarActivity {
 			mAdView.pause();
 		}
 		super.onPause();
-
-	}
-
-	@Override
-	public void onBackPressed() {
-		// TODO Auto-generated method stub
-		super.onBackPressed();
-
-	}
-
-	@Override
-	protected void onStart() {
-		// TODO Auto-generated method stub
-		super.onStart();
 
 	}
 
@@ -130,7 +82,7 @@ public class JofoaMain extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
-			Intent intent = new Intent(JofoaMain.this, Sobre.class);
+			Intent intent = new Intent(Schedule.this, About.class);
 			startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);
