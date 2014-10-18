@@ -3,50 +3,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pre_banner"
-        android:src="@drawable/pre_banner"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    android:orientation="vertical"
+    android:id="@+id/relative">
 
 
     <Button
-        android:id="@+id/schedule_button"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_mask"
-        android:layout_below="@+id/pre_banner"
-        android:layout_alignLeft="@+id/pre_banner"
-        android:layout_alignStart="@+id/pre_banner"
-        android:layout_marginTop="45dp" />
-
-
-
-   <Button
-       android:id="@+id/register_button"
-       android:layout_width="150dp"
-       android:layout_height="wrap_content"
-       android:background="@drawable/button_mask"
-       android:layout_below="@+id/schedule_button"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="20dp" />
-
-
-
-       <Button
-           android:id="@+id/about_button"
-           android:layout_width="150dp"
-           android:layout_height="wrap_content"
-           android:background="@drawable/button_mask"
-           android:layout_below="@+id/register_button"
-           android:layout_alignRight="@+id/pre_banner"
-           android:layout_alignEnd="@+id/pre_banner"
-           android:layout_marginTop="20dp" />
-
-
+        android:text="New Button"
+        android:id="@+id/schedule_button"
+        android:layout_marginBottom="157dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

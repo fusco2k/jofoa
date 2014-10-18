@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +28,7 @@ import java.net.URISyntaxException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class Main extends Activity {
+public class Main extends ActionBarActivity {
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private static final String GCM_SENDER_ID = "613297133076";
@@ -70,6 +71,7 @@ public class Main extends Activity {
             Toast.makeText(getApplicationContext(), "Failed to check gcm", Toast.LENGTH_LONG).show();
         }
 
+
         mScheduleButton = (Button)findViewById(R.id.schedule_button);
         mScheduleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +80,7 @@ public class Main extends Activity {
                 startActivity(intent);
             }
         });
-
+        /**
         mAboutButton = (Button)findViewById(R.id.about_button);
         mAboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +89,7 @@ public class Main extends Activity {
                 startActivity(intent);
             }
         });
+        **/
     }
 
     private String registerWithGcm() {
