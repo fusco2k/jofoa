@@ -1,8 +1,5 @@
 package com.cognus.jofoa;
 
-import java.util.ArrayList;
-
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -12,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class Day3ListFragment extends ListFragment {
 	
@@ -57,6 +56,8 @@ public class Day3ListFragment extends ListFragment {
             timeTextView.setText(c.getTime().toString());
             ImageView fotoPalestrante = (ImageView)convertView.findViewById(R.id.foto);
             fotoPalestrante.setImageResource(c.getFoto());
+
+            getListView().setDivider(null);
 
             return convertView;
         }

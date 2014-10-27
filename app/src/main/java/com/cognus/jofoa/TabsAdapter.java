@@ -1,7 +1,5 @@
 package com.cognus.jofoa;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +11,8 @@ import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 public class TabsAdapter extends FragmentPagerAdapter implements TabListener, OnPageChangeListener{
 	private final Context mContext;
