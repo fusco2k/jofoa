@@ -41,8 +41,6 @@ public class Main extends ActionBarActivity {
     private Executor threadPool = Executors.newFixedThreadPool(1);
 
     Button mScheduleButton;
-    Button mRegisterButton;
-    Button mAboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +115,6 @@ public class Main extends ActionBarActivity {
         try {
             url = new URI("http://177.83.210.61:8080/php/register.php?regId=" + regid + "&appId=" + APP_ID);
         } catch (URISyntaxException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         HttpClient httpclient = new DefaultHttpClient();
@@ -127,10 +124,8 @@ public class Main extends ActionBarActivity {
         try {
             httpclient.execute(request);
         } catch (ClientProtocolException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

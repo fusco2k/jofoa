@@ -19,7 +19,6 @@ public class Day3ListFragment extends ListFragment {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		mCourses = CourseLab3.get(getActivity()).getCourses();
         CourseAdapter adapter = new CourseAdapter(mCourses);
@@ -51,9 +50,9 @@ public class Day3ListFragment extends ListFragment {
             TextView titleTextView =(TextView)convertView.findViewById(R.id.course_list_item_titleTextView);
             titleTextView.setText(c.getCourseName());
             TextView professorTextView =(TextView)convertView.findViewById(R.id.course_list_item_professorTextView);
-            professorTextView.setText(c.getProfessor().toString());
+            professorTextView.setText(c.getProfessor());
             TextView timeTextView =(TextView)convertView.findViewById(R.id.course_list_item_timeTextView);
-            timeTextView.setText(c.getTime().toString());
+            timeTextView.setText(c.getTime());
             ImageView fotoPalestrante = (ImageView)convertView.findViewById(R.id.foto);
             fotoPalestrante.setImageResource(c.getFoto());
 
