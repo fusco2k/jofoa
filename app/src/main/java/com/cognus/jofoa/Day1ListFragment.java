@@ -14,21 +14,21 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Day1ListFragment extends ListFragment {
-	
-	public static final String TAG = "Course1";
-	 private ArrayList<Course> mCourses;
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		mCourses = CourseLab1.get(getActivity()).getCourses();
+
+    public static final String TAG = "Course1";
+    private ArrayList<Course> mCourses;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mCourses = CourseLab1.get(getActivity()).getCourses();
         CourseAdapter adapter = new CourseAdapter(mCourses);
-		setListAdapter(adapter);
-	}
-	
-	@Override
-    public void onListItemClick(ListView l, View v, int position, long id) { 
-        Course c = (Course)(getListAdapter()).getItem(position);
+        setListAdapter(adapter);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Course c = (Course) (getListAdapter()).getItem(position);
         Log.d(TAG, c.getCourseName() + " was clicked");
     }
 
@@ -37,24 +37,25 @@ public class Day1ListFragment extends ListFragment {
             super(getActivity(), android.R.layout.simple_list_item_1, courses);
         }
 
-        @SuppressLint("InflateParams") @Override
+        @SuppressLint("InflateParams")
+        @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             // if we weren't given a view, inflate one
             if (null == convertView) {
                 convertView = getActivity().getLayoutInflater()
-                    .inflate(R.layout.list_item_course, null);
+                        .inflate(R.layout.list_item_course, null);
             }
 
             // configure the view for this Crime
             Course c = getItem(position);
 
-            TextView titleTextView =(TextView)convertView.findViewById(R.id.course_list_item_titleTextView);
+            TextView titleTextView = (TextView) convertView.findViewById(R.id.course_list_item_titleTextView);
             titleTextView.setText(c.getCourseName());
-            TextView professorTextView =(TextView)convertView.findViewById(R.id.course_list_item_professorTextView);
+            TextView professorTextView = (TextView) convertView.findViewById(R.id.course_list_item_professorTextView);
             professorTextView.setText(c.getProfessor());
-            TextView timeTextView =(TextView)convertView.findViewById(R.id.course_list_item_timeTextView);
+            TextView timeTextView = (TextView) convertView.findViewById(R.id.course_list_item_timeTextView);
             timeTextView.setText(c.getTime());
-            ImageView fotoPalestrante = (ImageView)convertView.findViewById(R.id.foto);
+            ImageView fotoPalestrante = (ImageView) convertView.findViewById(R.id.foto);
             fotoPalestrante.setImageResource(c.getFoto());
 
             getListView().setDivider(null);

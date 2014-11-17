@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:id="@+id/relative">
+    android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/abc_search_url_text_normal"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
         android:id="@+id/schedule_button"
-        android:layout_marginBottom="157dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Schedule"
+        android:layout_centerHorizontal="true"
+        android:background="@color/green_light"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="sign in with google"
+        android:layout_centerHorizontal="true"
+        android:background="@color/common_signin_btn_default_background"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="sign in with facebook"
+        android:layout_centerHorizontal="true"
+        android:background="@color/indigo"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp" />
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="about"
+        android:layout_centerHorizontal="true"
+        android:background="@color/green_dark"/>
+
+</LinearLayout>

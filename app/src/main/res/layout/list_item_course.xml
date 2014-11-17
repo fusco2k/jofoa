@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
-
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="3dp">
+        card_view:cardElevation="3dp"
+        android:layout_margin="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal" >
 
             <ImageView
                 android:id="@+id/foto"
                 android:layout_width="48dp"
                 android:layout_height="56dp"
-                android:padding="2dp" />
+                android:padding="3dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -54,7 +55,6 @@
                     android:text="TesteProfessor"
                     android:textSize="10sp" />
             </LinearLayout>
-
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

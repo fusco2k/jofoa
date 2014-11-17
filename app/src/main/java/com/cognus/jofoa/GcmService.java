@@ -50,14 +50,14 @@ public class GcmService extends IntentService {
                 setContentTitle("Title").setContentText(message);
         Intent resultIntent = new Intent(context, Main.class);
         PendingIntent resultPendingIntent = PendingIntent.getActivity(
-                        context,
-                        0,
-                        resultIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT
-                );
+                context,
+                0,
+                resultIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT
+        );
         mBuilder.setContentIntent(resultPendingIntent);
         int mNotificationId = 001;
-        NotificationManager mNotifyMgr =(NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
+        NotificationManager mNotifyMgr = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         mBuilder.setDefaults(Notification.DEFAULT_ALL);
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }

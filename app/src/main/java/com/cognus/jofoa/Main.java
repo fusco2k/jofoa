@@ -40,7 +40,8 @@ public class Main extends ActionBarActivity {
 
     private Executor threadPool = Executors.newFixedThreadPool(1);
 
-    Button mScheduleButton;
+    private Button mScheduleButton;
+    private Button mAboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +67,7 @@ public class Main extends ActionBarActivity {
             Toast.makeText(getApplicationContext(), "Failed to check gcm", Toast.LENGTH_LONG).show();
         }
 
-
-        mScheduleButton = (Button)findViewById(R.id.schedule_button);
+        mScheduleButton = (Button) findViewById(R.id.schedule_button);
         mScheduleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,8 +75,7 @@ public class Main extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-        /**
-        mAboutButton = (Button)findViewById(R.id.about_button);
+        mAboutButton = (Button) findViewById(R.id.about_button);
         mAboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +83,7 @@ public class Main extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-        **/
+
     }
 
     private String registerWithGcm() {
@@ -96,7 +95,7 @@ public class Main extends ActionBarActivity {
             registrationId = gcm.register(GCM_SENDER_ID);
             mesg = "Device registered! My registration = " + registrationId;
 
-            sendRegistrationIdToMyServer(registrationId);
+            //sendRegistrationIdToMyServer(registrationId);
 
             storeRegistrationId(context, registrationId);
         } catch (IOException ex) {
@@ -110,32 +109,33 @@ public class Main extends ActionBarActivity {
         return mesg;
     }
 
-    private void sendRegistrationIdToMyServer(String regid) {
-        URI url = null;
-        try {
-            url = new URI("http://177.83.210.61:8080/php/register.php?regId=" + regid + "&appId=" + APP_ID);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpGet request = new HttpGet();
-        request.setURI(url);
-        Log.i(TAG, "Sent to server");
-        try {
-            httpclient.execute(request);
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    /**
+     * private void sendRegistrationIdToMyServer(String regid) {
+     * URI url = null;
+     * try {
+     * url = new URI("http://177.83.210.61:8080/php/register.php?regId=" + regid + "&appId=" + APP_ID);
+     * } catch (URISyntaxException e) {
+     * e.printStackTrace();
+     * }
+     * HttpClient httpclient = new DefaultHttpClient();
+     * HttpGet request = new HttpGet();
+     * request.setURI(url);
+     * Log.i(TAG, "Sent to server");
+     * try {
+     * httpclient.execute(request);
+     * } catch (ClientProtocolException e) {
+     * e.printStackTrace();
+     * } catch (IOException e) {
+     * e.printStackTrace();
+     * }
+     * }
+     */
     private void storeRegistrationId(Context context, String regId) {
         final SharedPreferences prefs = getSharedPreferences(Main.class.getSimpleName(), Context.MODE_PRIVATE);
         Log.i(TAG, "Saving regId on app version " + regId);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(PROPERTY_REG_ID, regId);
-        editor.commit();
+        editor.apply();
     }
 
     private String getRegistrationId(Context context) {
@@ -156,8 +156,7 @@ public class Main extends ActionBarActivity {
             if (GooglePlayServicesUtil.isUserRecoverableError(ret)) {
                 GooglePlayServicesUtil.getErrorDialog(ret, this, PLAY_SERVICES_RESOLUTION_REQUEST).show();
             } else {
-                Toast.makeText(this,
-                        "Google Message Not Supported on this device", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Google Message Not Supported on this device", Toast.LENGTH_LONG).show();
             }
             return false;
         }

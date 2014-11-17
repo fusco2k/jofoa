@@ -5,12 +5,12 @@ import android.content.Context;
 import java.util.ArrayList;
 
 public class CourseLab1 {
-	
-	private ArrayList<Course> mCourses;
+
+    private ArrayList<Course> mCourses;
 
     private static CourseLab1 sCourseLab;
 
-    
+
     private CourseLab1(Context appContext) {
 
         mCourses = new ArrayList<Course>();
