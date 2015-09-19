@@ -4,7 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,14 +27,16 @@ import java.net.URISyntaxException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class Main extends ActionBarActivity {
+public class Main extends AppCompatActivity {
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private static final String GCM_SENDER_ID = "613297133076";
-    private static final int APP_ID = 01;
+    //private static final int APP_ID = 01;
     public static final String PROPERTY_REG_ID = "registration_id";
 
     static final String TAG = "JOFOA";
+
+    private Toolbar mToolbar;
 
     private Context context;
     private GoogleCloudMessaging gcm;
@@ -49,6 +52,8 @@ public class Main extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate()");
         setContentView(R.layout.activity_main);
+        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
         context = getApplicationContext();
         if (checkForGcm()) {
             gcm = GoogleCloudMessaging.getInstance(this);
