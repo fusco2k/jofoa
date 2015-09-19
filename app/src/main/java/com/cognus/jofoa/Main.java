@@ -14,14 +14,15 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
+import java.io.IOException;
+/**
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+ **/
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
