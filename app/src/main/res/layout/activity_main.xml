@@ -9,7 +9,7 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
-        ></include>
+        />
 
     <ImageView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:layout_height="60dp"
         android:text="sign in with google"
         android:layout_centerHorizontal="true"
-        android:background="@color/common_signin_btn_default_background"/>
+        android:background="@color/green_light"/>
 
     <Button
         android:layout_width="match_parent"
