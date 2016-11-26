@@ -115,27 +115,7 @@ public class Main extends AppCompatActivity {
         return mesg;
     }
 
-    /**
-     * private void sendRegistrationIdToMyServer(String regid) {
-     * URI url = null;
-     * try {
-     * url = new URI("http://177.83.210.61:8080/php/register.php?regId=" + regid + "&appId=" + APP_ID);
-     * } catch (URISyntaxException e) {
-     * e.printStackTrace();
-     * }
-     * HttpClient httpclient = new DefaultHttpClient();
-     * HttpGet request = new HttpGet();
-     * request.setURI(url);
-     * Log.i(TAG, "Sent to server");
-     * try {
-     * httpclient.execute(request);
-     * } catch (ClientProtocolException e) {
-     * e.printStackTrace();
-     * } catch (IOException e) {
-     * e.printStackTrace();
-     * }
-     * }
-     */
+
     private void storeRegistrationId(Context context, String regId) {
         final SharedPreferences prefs = getSharedPreferences(Main.class.getSimpleName(), Context.MODE_PRIVATE);
         Log.i(TAG, "Saving regId on app version " + regId);
