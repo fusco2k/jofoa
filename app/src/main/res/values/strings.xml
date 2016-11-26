@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Congresso FOAr</string>
-    <string name="gcm_sender_id">613297133076</string>
     <string name="ad_id">ca-app-pub-6441386430650591/6373774084</string>
 
 </resources>

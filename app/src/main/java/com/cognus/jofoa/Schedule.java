@@ -16,7 +16,6 @@ public class Schedule extends AppCompatActivity {
     AdView mAdView;
 
     private Toolbar mToolbar;
-    private TabLayout mTabLayout;
     private ViewPager mPager;
     private ViewPagerAdapter mViewPagerAdapter;
     CharSequence Titles[]={"Segunda", "Terça", "Quarta", "Quinta", "Sexta"};
@@ -37,7 +36,7 @@ public class Schedule extends AppCompatActivity {
         tabLayout.setupWithViewPager(mPager);
 
         mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("CA6D1EFA27B8DABCBCE6C68C8F23B676").build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("D58C9BC26E22EDC2B0F2974393D0B23B").build();
         mAdView.loadAd(adRequest);
 
 
