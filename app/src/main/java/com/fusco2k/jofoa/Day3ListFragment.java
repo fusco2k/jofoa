@@ -1,6 +1,5 @@
-package com.cognus.jofoa;
+package com.fusco2k.jofoa;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -13,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Day1ListFragment extends ListFragment {
+public class Day3ListFragment extends ListFragment {
 
     public static final String TAG = "Course1";
     private ArrayList<Course> mCourses;
@@ -21,7 +20,7 @@ public class Day1ListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCourses = CourseLab1.get(getActivity()).getCourses();
+        mCourses = CourseLab3.get(getActivity()).getCourses();
         CourseAdapter adapter = new CourseAdapter(mCourses);
         setListAdapter(adapter);
     }
@@ -37,7 +36,6 @@ public class Day1ListFragment extends ListFragment {
             super(getActivity(), android.R.layout.simple_list_item_1, courses);
         }
 
-        @SuppressLint("InflateParams")
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             // if we weren't given a view, inflate one

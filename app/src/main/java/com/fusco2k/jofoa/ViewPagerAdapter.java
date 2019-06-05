@@ -1,4 +1,4 @@
-package com.cognus.jofoa;
+package com.fusco2k.jofoa;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

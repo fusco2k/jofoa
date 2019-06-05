@@ -1,4 +1,4 @@
-package com.cognus.jofoa;
+package com.fusco2k.jofoa;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -12,15 +12,15 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Day2ListFragment extends ListFragment {
+public class Day5ListFragment extends ListFragment {
 
-    public static final String TAG = "Course2";
+    public static final String TAG = "Course1";
     private ArrayList<Course> mCourses;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCourses = CourseLab2.get(getActivity()).getCourses();
+        mCourses = CourseLab5.get(getActivity()).getCourses();
         CourseAdapter adapter = new CourseAdapter(mCourses);
         setListAdapter(adapter);
     }
@@ -55,7 +55,6 @@ public class Day2ListFragment extends ListFragment {
             timeTextView.setText(c.getTime());
             ImageView fotoPalestrante = (ImageView) convertView.findViewById(R.id.foto);
             fotoPalestrante.setImageResource(c.getFoto());
-
             getListView().setDivider(null);
 
             return convertView;
