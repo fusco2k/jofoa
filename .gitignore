@@ -3,6 +3,7 @@
 
 .DS_Store
 /build
+/app/build
 /captures
 .externalNativeBuild
 
@@ -36,6 +37,7 @@ _testmain.go
 *.iml
 
 # Directory-based project format:
+/.idea
 .idea/
 .idea/workspace.xml
 **/.idea/workspace.xml
