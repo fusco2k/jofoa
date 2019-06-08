@@ -1,0 +1,14 @@
+package com.fusco2k.jofoa
+
+import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        supportFragmentManager.beginTransaction().add(R.id.frameLayout, HomeFragment()).commit()
+    }
+}
