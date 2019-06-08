@@ -10,8 +10,8 @@ android {
         applicationId "com.fusco2k.jofoa"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 201
-        versionName "2.01"
+        versionCode 210
+        versionName "2.10"
     }
     buildTypes {
         release {
