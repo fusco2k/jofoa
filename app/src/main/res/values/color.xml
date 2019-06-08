@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="green_light">#8bc34a</color>
-    <color name="green_dark">#689f38</color>
-    <color name="yellow_A200">#ffff00</color>
-    <color name="indigo">#3F51B5</color>
+    <color name="green_light">#8BC34A</color>
+    <color name="green_dark">#689F38</color>
+    <color name="yellow_A200">#FFFF00</color>
 </resources>

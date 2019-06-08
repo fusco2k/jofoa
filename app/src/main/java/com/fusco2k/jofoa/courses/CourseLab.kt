@@ -1,9 +1,10 @@
-package com.fusco2k.jofoa
+package com.fusco2k.jofoa.courses
+
+import com.fusco2k.jofoa.R
 
 data class Course(val courseName: String, val professorName: String, val eventTime: String, val pictureID: Int)
 
 class CourseLab() {
-
     val monday = listOf(
         Course("Abertura Solene", "", "08:00", R.drawable.c0),
         Course(
@@ -126,7 +127,12 @@ class CourseLab() {
     )
 
     val friday = listOf(
-        Course("Jornada Acadêmica: Final", "", "08:00 as 12:00", R.drawable.c0),
+        Course(
+            "Jornada Acadêmica: Final",
+            "",
+            "08:00 as 12:00",
+            R.drawable.c0
+        ),
         Course(
             "Instrumentação Rotatória e reciprocamente - Mtwo e Reciproc - Hands On",
             "Prof. Dr. Mário Tanomaru",
@@ -139,7 +145,12 @@ class CourseLab() {
             "14:00 as 18:00",
             R.drawable.c18
         ),
-        Course("Coquetel de Encerramento e Entrega dos Prêmios da Jornada Acadêmica", "", "20:30", R.drawable.c0)
+        Course(
+            "Coquetel de Encerramento e Entrega dos Prêmios da Jornada Acadêmica",
+            "",
+            "20:30",
+            R.drawable.c0
+        )
     )
 
     val event = listOf(monday, tuesday, wednesday, thursday, friday)
