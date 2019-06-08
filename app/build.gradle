@@ -1,18 +1,18 @@
 apply plugin: 'com.android.application'
 
-android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.cognus.jofoa"
+        applicationId "com.fusco2k.jofoa"
         minSdkVersion 19
-        targetSdkVersion 25
-        multiDexEnabled true
+        targetSdkVersion 28
         versionCode 201
         versionName "2.01"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -20,17 +20,11 @@ android {
         }
     }
 }
-
-ext {
-    supportLibVersion = '25.0.1'  // variable that can be referenced to keep support libs consistent
-}
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'com.google.android.gms:play-services:10.0.0'
-    compile "com.android.support:support-v4:${supportLibVersion}"
-    compile "com.android.support:appcompat-v7:${supportLibVersion}"
-    compile "com.android.support:cardview-v7:${supportLibVersion}"
-    compile "com.android.support:design:${supportLibVersion}"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
 }
